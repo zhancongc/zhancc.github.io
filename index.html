@@ -259,7 +259,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-18 18:34:05" itemprop="dateModified" datetime="2019-10-18T18:34:05+08:00">2019-10-18</time>
+                <time title="Modified: 2019-10-18 18:41:00" itemprop="dateModified" datetime="2019-10-18T18:41:00+08:00">2019-10-18</time>
               </span>
             
           
@@ -305,7 +305,13 @@
 <h2 id="用hexo丰富网站"><a href="#用hexo丰富网站" class="headerlink" title="用hexo丰富网站"></a>用hexo丰富网站</h2><ol>
 <li>安装hexo</li>
 </ol>
-<figure class="highlight plain"><figcaption><span>install hexo-cli --save```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 初始化</span><br><span class="line"></span><br><span class="line">新建一个文件夹，命名为 hexo-project</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line">cd hexo-project</span><br><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo install hexo-cli --save</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>初始化</li>
+</ol>
+<p>新建一个文件夹，命名为 <code>hexo-project</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo-project</span><br><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>测试部署</li>
@@ -323,7 +329,7 @@
 <h2 id="hexo关联git仓库"><a href="#hexo关联git仓库" class="headerlink" title="hexo关联git仓库"></a>hexo关联git仓库</h2><ol>
 <li>修改配置文件_config.yml</li>
 </ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">	<span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">	<span class="attr">repo:</span> <span class="attr">https://github.com/yourname/yourname.github.io.git</span></span><br><span class="line">	<span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/yourname/yourname.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>安装hexo部署模块</li>
