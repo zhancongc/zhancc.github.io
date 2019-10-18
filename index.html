@@ -218,7 +218,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://zhancc.xyz/2019/10/17/first-article/">
+    <link itemprop="mainEntityOfPage" href="http://zhancc.xyz/2019/10/17/How-to-build-a-website-with-github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="James Zhan">
@@ -233,7 +233,7 @@
         <h1 class="post-title" itemprop="name headline">
           
             
-            <a href="/2019/10/17/first-article/" class="post-title-link" itemprop="url">如何使用github搭建一个网站</a>
+            <a href="/2019/10/17/How-to-build-a-website-with-github/" class="post-title-link" itemprop="url">如何使用github搭建一个网站</a>
           
         </h1>
 
@@ -259,7 +259,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-18 15:58:41" itemprop="dateModified" datetime="2019-10-18T15:58:41+08:00">2019-10-18</time>
+                <time title="Modified: 2019-10-18 18:34:05" itemprop="dateModified" datetime="2019-10-18T18:34:05+08:00">2019-10-18</time>
               </span>
             
           
@@ -275,28 +275,50 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><ol>
-<li>创建一个仓库： yourname.github.io</li>
-<li>clone到本地，添加文件内容即可</li>
+          <blockquote>
+<p>本教程主要用作纪念我的第二次建站，顺便给有缘人一点参考。（第一次是用flask，现在不想折腾了）</p>
+</blockquote>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>（默认你会用Git和GitHub，不会的话先去学Git）</p>
+<ol>
+<li>创建一个仓库： <code>yourname.github.io</code></li>
+<li>clone到本地，添加<code>index.html</code></li>
+<li>浏览器访问<code>yourname.github.io/</code>即可看到首页</li>
 </ol>
+<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><blockquote>
+<p>本节是可选内容</p>
+</blockquote>
+<ol>
+<li>购买域名</li>
+</ol>
+<p>域名服务商有万网，godaddy等，视实际情况购买。</p>
+<blockquote>
+<p>想备案就去买境内的，不想备案就买境外的</p>
+</blockquote>
+<ol start="2">
+<li>添加域名解析</li>
+</ol>
+<p>添加CNAME记录，主机记录填<code>@</code>，需要二级域名，可以填二级域名的名字。记录值为：<code>yourname.github.io</code>。</p>
+<ol start="3">
+<li>访问</li>
+</ol>
+<p>如果域名是“xxx.com”，那么访问该网址即可。</p>
 <h2 id="用hexo丰富网站"><a href="#用hexo丰富网站" class="headerlink" title="用hexo丰富网站"></a>用hexo丰富网站</h2><ol>
 <li>安装hexo</li>
 </ol>
-<figure class="highlight plain"><figcaption><span>install -g hexo-cli --save```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 初始化</span><br><span class="line">```hexo init blog</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>install hexo-cli --save```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 初始化</span><br><span class="line"></span><br><span class="line">新建一个文件夹，命名为 hexo-project</span><br><span class="line"></span><br><span class="line">```shell</span><br><span class="line">cd hexo-project</span><br><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 
 <ol start="3">
 <li>测试部署</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>hexo命令帮助</p>
-<p>hexo new 新建文章<br>hexo generate 生成文件<br>hexo server 创建文件服务器<br>hexo deploy 网站部署<br>hexo clean 清楚缓存</p>
-</blockquote>
 <ol start="4">
 <li>访问</li>
 </ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://127.0.0.1:4000</span><br></pre></td></tr></table></figure>
+
+<p>hexo命令帮助</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new 新建文章</span><br><span class="line">hexo generate 生成文件</span><br><span class="line">hexo server 创建文件服务器</span><br><span class="line">hexo deploy 网站部署</span><br><span class="line">hexo clean 清除缓存</span><br></pre></td></tr></table></figure>
 
 <h2 id="hexo关联git仓库"><a href="#hexo关联git仓库" class="headerlink" title="hexo关联git仓库"></a>hexo关联git仓库</h2><ol>
 <li>修改配置文件_config.yml</li>
@@ -311,9 +333,50 @@
 <ol start="3">
 <li>改动提交</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>此处可能要输入你的github账户和密码</p>
+<h2 id="为Hexo添加主题next"><a href="#为Hexo添加主题next" class="headerlink" title="为Hexo添加主题next"></a>为Hexo添加主题next</h2><blockquote>
+<p>本节是可选内容</p>
+</blockquote>
+<ol>
+<li>下载安装</li>
+</ol>
+<p>回到hexo根目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>修改配置</li>
+</ol>
+<p>修改根目录下的<code>_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2>
+<ol start="3">
+<li>创建tags</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page "tags"</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>修改tags下的文件<code>index.md</code></li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">All</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2014</span><span class="bullet">-10</span><span class="bullet">-18</span> <span class="number">18</span><span class="string">:18:09</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>添加tags页签</li>
+</ol>
+<p>修改<code>theme/next/_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>添加社交账号</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  GitHub:</span> <span class="string">your-github-url</span></span><br><span class="line"><span class="attr">  Twitter:</span> <span class="string">your-twitter-url</span></span><br><span class="line"><span class="attr">  Weibo:</span> <span class="string">your-weibo-url</span></span><br><span class="line"><span class="attr">  DouBan:</span> <span class="string">your-douban-url</span></span><br><span class="line"><span class="attr">  ZhiHu:</span> <span class="string">your-zhihu-url</span></span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>其它配置</li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Favicon</span></span><br><span class="line"><span class="attr">  favicon:</span> <span class="string">/favicon.ico</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">/default_avatar.png</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">rss:</span> <span class="attr">http://your-feed-url</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment"># Fancybox for image gallery</span></span><br><span class="line"><span class="attr">fancybox:</span> <span class="literal">true</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment"># Specify the date when the site was setup</span></span><br><span class="line"><span class="attr">since:</span> <span class="number">2013</span></span><br></pre></td></tr></table></figure>
+
+
+
         
       
     </div>
