@@ -4,22 +4,11 @@ const ap = new APlayer({
     autoplay: false,
     audio: [
       {
-        name: "PDD洪荒之力",
-        artist: '徐梦圆',
-        url: 'http://up.mcyt.net/?down/39868.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/84.jpg',
-      },
-      {
-        name: '9420',
-        artist: '麦小兜',
-        url: 'http://up.mcyt.net/?down/45967.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/8.jpg',
-      },
-      {
-        name: '风筝误',
-        artist: '刘珂矣',
-        url: 'http://up.mcyt.net/?down/46644.mp3',
-        cover: 'http://oeff2vktt.bkt.clouddn.com/image/96.jpg',
-      }
+        name: "明天你好",
+        artist: '牛奶咖啡',
+        url: 'https://music.163.com/song/media/outer/url?id=33756016.mp3',
+        cover: 'https://p1.music.126.net/1Al0vrBmm5-HtNXyJH953w==/7952767605403009.jpg',
+	lrc: 'lrc/明天你好.lrc',
+      },  
     ]
 });
