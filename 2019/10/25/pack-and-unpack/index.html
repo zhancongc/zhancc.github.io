@@ -55,29 +55,31 @@
   };
 </script>
 
-  <meta name="description" content="技术分享，碎碎念，某些事情的思考，不定期更新">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一江春水">
-<meta property="og:url" content="http:&#x2F;&#x2F;zhancc.xyz&#x2F;index.html">
+  <meta name="description" content="tar.gz zip bz2解压标签： 软件  12345678910111213141516171819202122232425262728293031323334353637# 压缩tar -czvf ***.tar.gztar -cjvf ***.tar.bz2# 解压tar -xzvf ***.tar.gztar -xjvf ***.tar.bz2-c 建立归档文件-x 解开归档文件-t">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pack and unpack">
+<meta property="og:url" content="http:&#x2F;&#x2F;zhancc.xyz&#x2F;2019&#x2F;10&#x2F;25&#x2F;pack-and-unpack&#x2F;index.html">
 <meta property="og:site_name" content="一江春水">
-<meta property="og:description" content="技术分享，碎碎念，某些事情的思考，不定期更新">
+<meta property="og:description" content="tar.gz zip bz2解压标签： 软件  12345678910111213141516171819202122232425262728293031323334353637# 压缩tar -czvf ***.tar.gztar -cjvf ***.tar.bz2# 解压tar -xzvf ***.tar.gztar -xjvf ***.tar.bz2-c 建立归档文件-x 解开归档文件-t">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-24T17:34:50.513Z">
 <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="http://zhancc.xyz/">
+  <link rel="canonical" href="http://zhancc.xyz/2019/10/25/pack-and-unpack/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>一江春水</title>
+  <title>pack and unpack | 一江春水</title>
   
 
 
@@ -222,10 +224,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
     <link itemprop="mainEntityOfPage" href="http://zhancc.xyz/2019/10/25/pack-and-unpack/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -240,8 +242,9 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
+            pack and unpack
             
-            <a href="/2019/10/25/pack-and-unpack/" class="post-title-link" itemprop="url">pack and unpack</a>
+
           
         </h1>
 
@@ -275,309 +278,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="tar-gz-zip-bz2解压"><a href="#tar-gz-zip-bz2解压" class="headerlink" title="tar.gz zip bz2解压"></a>tar.gz zip bz2解压</h1><p>标签： 软件</p>
+        <h1 id="tar-gz-zip-bz2解压"><a href="#tar-gz-zip-bz2解压" class="headerlink" title="tar.gz zip bz2解压"></a>tar.gz zip bz2解压</h1><p>标签： 软件</p>
 <hr>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 压缩</span></span><br><span class="line">tar -czvf ***.tar.gz</span><br><span class="line">tar -cjvf ***.tar.bz2</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 解压</span></span><br><span class="line">tar -xzvf ***.tar.gz</span><br><span class="line">tar -xjvf ***.tar.bz2</span><br><span class="line"></span><br><span class="line">-c 建立归档文件</span><br><span class="line">-x 解开归档文件</span><br><span class="line">-t 查看归档文件中的档案</span><br><span class="line">-z 使用gzip压缩</span><br><span class="line">-j 使用bzip2压缩</span><br><span class="line">-v 压缩过程中显示日志</span><br><span class="line">-f 配置档案名称</span><br><span class="line">-p 使用档案原来的属性</span><br><span class="line">-P 使用绝对路径</span><br><span class="line">-N 比参数日期新的文件才会被打包</span><br><span class="line">--exclude FILE 不要将FILE打包</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 仅打包，不压缩！</span></span><br><span class="line">tar -cvf /tmp/etc.tar /etc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 打包后，以 gzip 压缩</span></span><br><span class="line">tar -czvf /tmp/etc.tar.gz /etc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 打包后，以 bzip2 压缩</span></span><br><span class="line">tar -cjvf /tmp/etc.tar.bz2 /etc</span><br><span class="line"></span><br><span class="line">.bz2 </span><br><span class="line">　　解压1：bzip2 -d FileName.bz2 </span><br><span class="line">　　解压2：bunzip2 FileName.bz2 </span><br><span class="line">　　压缩： bzip2 -z FileName </span><br><span class="line">.tar.bz2 </span><br><span class="line">　　解压1：tar -xjvf FileName.tar.bz2</span><br><span class="line">　　解压2：tar --bzip xvf FileName.tar.bz2 </span><br><span class="line">　　压缩：tar -cjvf FileName.tar.bz2 DirName</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line">大致总结了一下linux下各种格式的压缩包的压缩、解压方法。但是部分方法我没有用到，也就不全，希望大家帮我补充，我将随时修改完善，谢谢！</span><br><span class="line">　　</span><br><span class="line">　　.tar</span><br><span class="line">　　解包：tar xvf FileName.tar</span><br><span class="line">　　打包：tar cvf FileName.tar DirName</span><br><span class="line">　　（注：tar是打包，不是压缩！）</span><br><span class="line">　　———————————————</span><br><span class="line">　　.gz</span><br><span class="line">　　解压 1：gunzip FileName.gz</span><br><span class="line">　　解压2：gzip -d FileName.gz</span><br><span class="line">　　压缩：gzip FileName</span><br><span class="line">　　.tar.gz 和 .tgz</span><br><span class="line">　　解压：tar zxvf FileName.tar.gz</span><br><span class="line">　　压缩：tar zcvf FileName.tar.gz DirName</span><br><span class="line">　　———————————————</span><br><span class="line">　　.bz2</span><br><span class="line">　　解压1：bzip2 -d FileName.bz2</span><br><span class="line">　　解压2：bunzip2 FileName.bz2</span><br><span class="line">　　压缩： bzip2 -z FileName</span><br><span class="line">　　.tar.bz2</span><br><span class="line">　　解压：tar jxvf FileName.tar.bz2        或tar --bzip xvf FileName.tar.bz2</span><br><span class="line">　　压缩：tar jcvf FileName.tar.bz2 DirName</span><br><span class="line">　　 ———————————————</span><br><span class="line">　　.bz</span><br><span class="line">　　解压1：bzip2 -d FileName.bz</span><br><span class="line">　　解压2：bunzip2 FileName.bz</span><br><span class="line">　　压缩：未知</span><br><span class="line">　　.tar.bz</span><br><span class="line">　　解压：tar jxvf FileName.tar.bz</span><br><span class="line">　　压缩：未知</span><br><span class="line">　　———————————————</span><br><span class="line">　　.Z</span><br><span class="line">　　解压：uncompress FileName.Z</span><br><span class="line">　　压缩：compress FileName</span><br><span class="line">　　.tar.Z</span><br><span class="line">　　解压：tar Zxvf FileName.tar.Z</span><br><span class="line">　　压缩：tar Zcvf FileName.tar.Z DirName</span><br><span class="line">　　———————————————</span><br><span class="line">　　.zip</span><br><span class="line">　　解压：unzip FileName.zip</span><br><span class="line">　　压缩：zip FileName.zip DirName</span><br><span class="line">　　压缩一个目录使用 -r 参数，-r 递归。例： $ zip -r FileName.zip DirName</span><br><span class="line">　　———————————————</span><br><span class="line">　　.rar</span><br><span class="line">　　解压：rar x FileName.rar</span><br><span class="line">　　压缩：rar a FileName.rar DirName</span><br><span class="line">　　</span><br><span class="line">　　rar 请到：http://www.rarsoft.com/download.htm 下载！</span><br><span class="line">　　解压后请将rar_static拷贝到/usr /bin目录（其他由$PATH环境变量指定的目录也可以）：</span><br><span class="line">　　[root@www2 tmp]# cp rar_static /usr/bin/rar</span><br><span class="line">　　———————————————</span><br><span class="line">　　.lha</span><br><span class="line">　　解压：lha -e FileName.lha</span><br><span class="line">　　压缩：lha -a FileName.lha FileName</span><br><span class="line">　　</span><br><span class="line">　　lha请到：http://www.infor.kanazawa-it.ac.jp/~ishii/lhaunix/下载！</span><br><span class="line">　　&gt;解压后请将 lha拷贝到/usr/bin目录（其他由$PATH环境变量指定的目录也可以）：</span><br><span class="line">　　[root@www2 tmp]# cp lha /usr/bin/</span><br><span class="line">　　———————————————</span><br><span class="line">　　.rpm</span><br><span class="line">　　解包：rpm2cpio FileName.rpm | cpio -div</span><br><span class="line">　　———————————————</span><br><span class="line">　　.deb</span><br><span class="line">　　解包：ar p FileName.deb data.tar.gz | tar zxf -</span><br><span class="line">　　———————————————</span><br><span class="line">　　.tar .tgz .tar.gz .tar.Z .tar.bz .tar.bz2 .zip .cpio .rpm .deb .slp .arj .rar .ace .lha .lzh .lzx .lzs .arc .sda .sfx .lnx .zoo .cab .kar .cpt .pit .sit .sea</span><br><span class="line">　　解压：sEx x FileName.*</span><br><span class="line">　　压缩：sEx a FileName.* FileName</span><br><span class="line">　　</span><br><span class="line">　　sEx只是调用相关程序，本身并无压缩、解压功能，请注意！</span><br><span class="line">　　sEx请到： http://sourceforge.net/projects/sex下载！</span><br><span class="line">　　解压后请将sEx拷贝到/usr/bin目录（其他由$PATH环境变量指定的目录也可以）：</span><br><span class="line">　　[root@www2 tmp]# cp sEx /usr/bin/　　Linux下常见文件解压方法及命令</span><br><span class="line">　　系统·System</span><br><span class="line">　　</span><br><span class="line">　　1.以.a为扩展名的文件:</span><br><span class="line">　　#tar xv file.a</span><br><span class="line">　　2.以.z为扩展名的文件:</span><br><span class="line">　　#uncompress file.Z</span><br><span class="line">　　3.以.gz为扩展名的文件:</span><br><span class="line">　　#gunzip file.gz</span><br><span class="line">　　4.以.bz2为扩展名的文件:</span><br><span class="line">　　#bunzip2 file.bz2</span><br><span class="line">　　5.以.tar.Z为扩展名的文件:</span><br><span class="line">　　#tar xvZf file.tar.Z</span><br><span class="line">　　或 #compress -dc file.tar.Z | tar xvf</span><br><span class="line">　　6.以.tar.gz/.tgz为扩展名的文件:</span><br><span class="line">　　#tar xvzf file.tar.gz</span><br><span class="line">　　或 gzip -dc file.tar.gz | tar xvf -</span><br><span class="line">　　7.以.tar.bz2为扩展名的文件:</span><br><span class="line">　　#tar xvIf file.tar.bz2</span><br><span class="line">　　或 bzip2 -dc file.tar.bz2 | xvf -</span><br><span class="line">　　8.以.cpio.gz/.cgz为扩展名的文件:</span><br><span class="line">　　#gzip -dc file.cgz | cpio -div</span><br><span class="line">　　9. 以.cpio/cpio为扩展名的文件:</span><br><span class="line">　　#cpio -div file.cpio</span><br><span class="line">　　或cpio -divc file.cpio</span><br><span class="line">　　10.以.rpm为扩展名的文件安装:</span><br><span class="line">　　#rpm -i file.rpm</span><br><span class="line">　　11.以.rpm为扩展名的文件解压缩：</span><br><span class="line">　　 #rpm2cpio file.rpm | cpio -div</span><br><span class="line">　　12.以.deb为扩展名的文件安装：</span><br><span class="line">　　#dpkg -i file.deb</span><br><span class="line">　　13.以.deb为扩展名的文件解压缩:</span><br><span class="line">　　#dpkg-deb -fsys-tarfile file.deb | tar xvf - ar p</span><br><span class="line">　　file.deb data.tar.gz | tar xvzf -</span><br><span class="line">　　14.以.zip为扩展名的文件:</span><br><span class="line">　　#unzip file.zip</span><br><span class="line">　　在linux下解压Winzip格式的文件</span><br><span class="line">　　要是装了jdk的话，可以用 jar命令；还可以使用unzip命令。</span><br><span class="line">　　直接解压.tar.gz文件</span><br><span class="line">　　xxxx.tar.gz文件使用tar带zxvf参数，可以一次解压开。XXXX为文件名。 例如：</span><br><span class="line">　　$tar zxvf xxxx.tar.gz 各种压缩文件的解压（安装方法）</span><br><span class="line">　　</span><br><span class="line">　　文件扩展名 解压（安装方法）</span><br><span class="line">　　　</span><br><span class="line">　　.a ar xv file.a</span><br><span class="line">　　.Z uncompress file.Z</span><br><span class="line">　　.gz gunzip file.gz</span><br><span class="line">　　.bz2 bunzip2 file.bz2</span><br><span class="line">　　.tar.Z tar xvZf file.tar.Z</span><br><span class="line">　　compress -dc file.tar.Z | tar xvf -</span><br><span class="line">　　.tar.gz/.tgz tar xvzf file.tar.gz</span><br><span class="line">　　gzip -dc file.tar.gz | tar xvf -</span><br><span class="line">　　.tar.bz2 tar xvIf file.tar.bz2</span><br><span class="line">　　bzip2 -dc file.tar.bz2 | xvf -</span><br><span class="line">　　.cpio.gz/.cgz gzip -dc file.cgz | cpio -div</span><br><span class="line">　　.cpio/cpio cpio -div file.cpio</span><br><span class="line">　　cpio -divc file.cpio</span><br><span class="line">　　.rpm/install rpm -i file.rpm</span><br><span class="line">　　.rpm/extract rpm2cpio file.rpm | cpio -div</span><br><span class="line">　　.deb/install dpkg -i file.deb</span><br><span class="line">　　.deb/exrtact dpkg-deb -fsys-tarfile file.deb | tar xvf -</span><br><span class="line">　　ar p file.deb data.tar.gz | tar xvzf -</span><br><span class="line">　　.zip unzip file.zip</span><br><span class="line">　　</span><br><span class="line">　　</span><br><span class="line">　　bzip2 -d myfile.tar.bz2 | tar xvf</span><br><span class="line">　　</span><br><span class="line">　　</span><br><span class="line">　　tar xvfz myfile.tar.bz2</span><br><span class="line">　　</span><br><span class="line">　　</span><br><span class="line">　　x 是解压</span><br><span class="line">　　v 是复杂输出</span><br><span class="line">　　f 是指定文件</span><br><span class="line">　　z gz格式</span><br><span class="line">　　</span><br><span class="line">　　</span><br><span class="line">　　gzip</span><br><span class="line">　　gzip[选项]要压缩（或解压缩）的文件名</span><br><span class="line">　　-c将输出写到标准输出上，并保留原有文件。</span><br><span class="line">　　-d将压缩文件压缩。</span><br><span class="line">　　-l对每个压缩文件，显示下列字段：压缩文件的大小，未压缩文件的大小、压缩比、未压缩文件的名字</span><br><span class="line">　　-r递归式地查找指定目录并压缩或压缩其中的所有文件。</span><br><span class="line">　　-t测试压缩文件是正完整。</span><br><span class="line">　　-v对每一个压缩和解压缩的文件，显示其文件名和压缩比。</span><br><span class="line">　　-num-用指定的数字调整压缩的速度。</span><br><span class="line">　　举例：</span><br><span class="line">　　把/usr目录并包括它的子目录在内的全部文件做一备份，备份文件名为usr.tar</span><br><span class="line">　　tar cvf usr.tar /home</span><br><span class="line">　　把/usr 目录并包括它的子目录在内的全部文件做一备份并进行压缩，备份文件名是usr.tar.gz</span><br><span class="line">　　tar czvf usr.tar.gz /usr</span><br><span class="line">　　压缩一组文件，文件的后缀为tar.gz</span><br><span class="line">　　#tar cvf back.tar /back/</span><br><span class="line">　　#gzip -q back.tar</span><br><span class="line">　　or</span><br><span class="line">　　#tar cvfz back.tar.gz /back/</span><br><span class="line">　　释放一个后缀为tar.gz 的文件。</span><br><span class="line">　　#tar zxvf back.tar.gz</span><br><span class="line">　　#gzip back.tar.gz</span><br><span class="line">　　#tar xvf back.tar</span><br></pre></td></tr></table></figure>
 
 
-        
-      
     </div>
 
     
     
     
+        
+      
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/shell/" rel="tag"># shell</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/10/21/study-note/" rel="next" title="软件测评师学习笔记">
+                  <i class="fa fa-chevron-left"></i> 软件测评师学习笔记
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
       </footer>
+    
   </article>
   
   
   
 
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://zhancc.xyz/2019/10/21/study-note/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Zhan">
-      <meta itemprop="description" content="技术分享，碎碎念，某些事情的思考，不定期更新">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一江春水">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2019/10/21/study-note/" class="post-title-link" itemprop="url">软件测评师学习笔记</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-10-21 10:47:56" itemprop="dateCreated datePublished" datetime="2019-10-21T10:47:56+08:00">2019-10-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-22 13:57:30" itemprop="dateModified" datetime="2019-10-22T13:57:30+08:00">2019-10-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><embed autostart="true" hidden="true" loop="true" src="http://music.163.com/song/media/outer/url?id=33756016.mp3"></embed></p>
-<h3 id="1-1-计算机基础知识"><a href="#1-1-计算机基础知识" class="headerlink" title="1.1 计算机基础知识"></a>1.1 计算机基础知识</h3><ol>
-<li><p>计算机硬件组成：运算器，控制器，存储器，输入设备，输出设备。运算器和控制器被集成在CPU里。</p>
-</li>
-<li><p>CPU的功能：程序控制，操作控制，时间控制，数据处理。</p>
-</li>
-<li><p>原码，反码，补码，移码</p>
-</li>
-<li><p>定点数，浮点数</p>
-</li>
-<li><p>校验码：奇偶校验码，海明码，循环冗余校验码</p>
-</li>
-</ol>
-<h3 id="1-2-计算机体系结构"><a href="#1-2-计算机体系结构" class="headerlink" title="1.2 计算机体系结构"></a>1.2 计算机体系结构</h3>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://zhancc.xyz/2019/10/17/How-to-build-a-website-with-github/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="James Zhan">
-      <meta itemprop="description" content="技术分享，碎碎念，某些事情的思考，不定期更新">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="一江春水">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            
-            <a href="/2019/10/17/How-to-build-a-website-with-github/" class="post-title-link" itemprop="url">如何使用github搭建一个网站</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
-                
-              
-
-              <time title="Created: 2019-10-17 14:56:29" itemprop="dateCreated datePublished" datetime="2019-10-17T14:56:29+08:00">2019-10-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-19 10:09:15" itemprop="dateModified" datetime="2019-10-19T10:09:15+08:00">2019-10-19</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <blockquote>
-<p>本教程主要用作纪念我的第二次建站，顺便给有缘人一点参考。<br>第一次是用flask，现在不想折腾了。</p>
-</blockquote>
-<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p>（默认你会用Git和GitHub，不会的话先去学Git）</p>
-<ol>
-<li>创建一个仓库： <code>yourname.github.io</code></li>
-<li>clone到本地，添加<code>index.html</code></li>
-<li>浏览器访问<code>yourname.github.io/</code>即可看到首页</li>
-</ol>
-<h2 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h2><blockquote>
-<p>本节是可选内容</p>
-</blockquote>
-<ol>
-<li>购买域名</li>
-</ol>
-<p>域名服务商有万网，godaddy等，视实际情况购买。</p>
-<blockquote>
-<p>想备案就去买境内的，不想备案就买境外的</p>
-</blockquote>
-<ol start="2">
-<li>添加域名解析</li>
-</ol>
-<p>添加CNAME记录，主机记录填<code>@</code>，需要二级域名，可以填二级域名的名字。记录值为：<code>yourname.github.io</code>。</p>
-<ol start="3">
-<li>访问</li>
-</ol>
-<p>尝试访问你的域名，不一定成功，因为域名解析有一定延迟。</p>
-<h2 id="用hexo丰富网站"><a href="#用hexo丰富网站" class="headerlink" title="用hexo丰富网站"></a>用hexo丰富网站</h2><ol>
-<li>安装hexo</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo install hexo-cli --save</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>初始化</li>
-</ol>
-<p>新建一个文件夹，命名为 <code>hexo-project</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo-project</span><br><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>测试部署</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_my_site</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>访问</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://127.0.0.1:4000</span><br></pre></td></tr></table></figure>
-
-<p>hexo命令帮助</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo new 新建文章</span><br><span class="line">hexo generate 生成文件</span><br><span class="line">hexo server 创建文件服务器</span><br><span class="line">hexo deploy 网站部署</span><br><span class="line">hexo clean 清除缓存</span><br></pre></td></tr></table></figure>
-
-<h2 id="hexo关联git仓库"><a href="#hexo关联git仓库" class="headerlink" title="hexo关联git仓库"></a>hexo关联git仓库</h2><ol>
-<li>修改配置文件_config.yml</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="attr">https://github.com/yourname/yourname.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>安装hexo部署模块</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>改动提交</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>此处可能要输入你的github账户和密码</p>
-<h2 id="为Hexo添加主题next"><a href="#为Hexo添加主题next" class="headerlink" title="为Hexo添加主题next"></a>为Hexo添加主题next</h2><blockquote>
-<p>本节是可选内容</p>
-</blockquote>
-<ol>
-<li>下载安装</li>
-</ol>
-<p>回到hexo根目录</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone --branch v5.1.2 https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>修改配置</li>
-</ol>
-<p>修改根目录下的<code>_config.yml</code></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>创建tags</li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page "tags"</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>修改tags下的文件<code>index.md</code></li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">All</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2014</span><span class="bullet">-10</span><span class="bullet">-18</span> <span class="number">18</span><span class="string">:18:09</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"tags"</span></span><br></pre></td></tr></table></figure>
-
-<ol start="5">
-<li>添加tags页签</li>
-</ol>
-<p>修改<code>theme/next/_config.yml</code></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span></span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>添加社交账号</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line"><span class="attr">  GitHub:</span> <span class="string">your-github-url</span></span><br><span class="line"><span class="attr">  Twitter:</span> <span class="string">your-twitter-url</span></span><br><span class="line"><span class="attr">  Weibo:</span> <span class="string">your-weibo-url</span></span><br><span class="line"><span class="attr">  DouBan:</span> <span class="string">your-douban-url</span></span><br><span class="line"><span class="attr">  ZhiHu:</span> <span class="string">your-zhihu-url</span></span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>其它配置</li>
-</ol>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Favicon</span></span><br><span class="line"><span class="attr">  favicon:</span> <span class="string">/favicon.ico</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">avatar:</span> <span class="string">/default_avatar.png</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">rss:</span> <span class="attr">http://your-feed-url</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment"># Fancybox for image gallery</span></span><br><span class="line"><span class="attr">fancybox:</span> <span class="literal">true</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="comment"># Specify the date when the site was setup</span></span><br><span class="line"><span class="attr">since:</span> <span class="number">2013</span></span><br></pre></td></tr></table></figure>
-
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-    
   </div>
-
-  
-
 
 
           </div>
@@ -594,6 +346,11 @@
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -606,6 +363,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#tar-gz-zip-bz2解压"><span class="nav-number">1.</span> <span class="nav-text">tar.gz zip bz2解压</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
